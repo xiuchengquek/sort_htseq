@@ -1,0 +1,39 @@
+dependencies:
+  samtools : "/share/ClusterShare/software/contrib/gi/samtools/1.2/bin/samtools"
+  htseq_count : "/home/xiuque/bin/htseq-count"
+
+
+references: 
+  gtf : '/home/xiuque/Projects/cuffmerge/cuff_cluster/filtered_chr.gtf'
+
+
+
+Samples:
+  - AKSFS04-L1
+  - D0VU5ACXX-3-03_TTAGGC_L003
+  - D0VU5ACXX-3-08_ACTTGA_L003
+  - D0VU5ACXX-3-09_GATCAG_L003
+  - D0VU5ACXX-3-10_TAGCTT_L003
+  - D0VU5ACXX-3-20_GTGGCC_L003
+  - D0VU5ACXX-4-21_GTTTCG_L004
+  - D0VU5ACXX-4-22_CGTACG_L004
+  - D0VU5ACXX-4-23_GAGTGG_L004
+  - D0VU5ACXX-4-25_ACTGAT_L004
+  - D0VU5ACXX-4-27_ATTCCT_L004
+  - VH008-JMM-L1
+  - VH009-AKH-L2
+  - VH018-AGG-L1
+  - VH019-CHM-L2
+  - VH019-CHM-L4
+  - VH020-EGB-L2
+  - VH020-EGB-L3
+  - VH021-WFL-L2
+  - VH022-ECP-L1
+  - VH026-REW-L1
+  - PR001_Normal
+  - PR002_Normal
+  - PR003_Normal
+  - PR004_Normal
+
+
+
