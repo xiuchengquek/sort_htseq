@@ -1,26 +1,27 @@
-
 samples = config['samples']
 samtools = config['dependencies']['samtools']
 htseq_count = config['dependencies']['htseq_count']
-gene_annotaton = config['references']['gtf']
+gene_annotation = config['references']['gtf']
 
 # all files should have the suffix counts in the counts folder
 rule all:
-	expand('data/counts/{samples}.counts', samples=samples)
-	
+    input : expand('data/counts/{samples}.counts', samples=samples)
+
 
 # this rule run sam sort from position to name
 rule run_samsort:
-	input : 'data/{samples}/Aligned.out.bam'
-	output : 'data/{samples}/Aligned.sorted.sam'
-	shell : "{samtools} sort -@ 4 -M 6G -n -O sam -T {samples} -o {output} "
+    input : 'data/{sample}/Aligned.out.bam'
+    output : 'data/{sample}/Aligned.sorted.sam'
+    params : cores='4'
+    shell : "{samtools} sort -@ 4 -m 4G -n -O sam -T {wildcards.sample} -o {output} {input}"
 	
 
 # this rule will run htseq with the approriate flags./
 rule run_htseq_count:
-	input : 'data/{samples}/Aligned.sorted.sam'
-	output : 'data/counts/{samples}.counts'
-	shell : '{htseq_count} -s no -t exon -i gene_id {input} {gene_annotation}'
+    input : 'data/{sample}/Aligned.sorted.sam'
+    output : 'data/counts/{sample}.counts'
+    params : cores='1'
+    shell : '{htseq_count} -s no -t exon -i gene_id {input} {gene_annotation} > {output}'
 	
 
 

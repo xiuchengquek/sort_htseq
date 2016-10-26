@@ -4,11 +4,11 @@ dependencies:
 
 
 references: 
-  gtf : '/home/xiuque/Projects/cuffmerge/cuff_cluster/filtered_chr.gtf'
+  gtf : '/share/ScratchGeneral/xiuque/chimeric_squamous_cell/filtered_chr.gtf'
 
 
 
-Samples:
+samples:
   - AKSFS04-L1
   - D0VU5ACXX-3-03_TTAGGC_L003
   - D0VU5ACXX-3-08_ACTTGA_L003
@@ -30,10 +30,10 @@ Samples:
   - VH021-WFL-L2
   - VH022-ECP-L1
   - VH026-REW-L1
-  - PR001_Normal
-  - PR002_Normal
-  - PR003_Normal
-  - PR004_Normal
+  - NORM1
+  - NORM2
+  - NORM3
+  - NORM4
 
 
 
